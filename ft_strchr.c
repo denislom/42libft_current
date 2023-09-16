@@ -19,11 +19,20 @@ the character is not found.
 */
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c)
+	const char	*ptr;
+	int			i;
+
+	if (s == NULL)
+		return (NULL);
+	i = 0;
+	ptr = s;
+	while (ptr[i])
 	{
-		if (!*s)
-			return (0);
-		s++;
+		if (ptr[i] == (char) c)
+			return ((char *)&ptr[i]);
+		i++;
 	}
-	return ((char *)s);
+	if ((char) c == ptr[i])
+		return ((char *)&ptr[i]);
+	return (NULL);
 }

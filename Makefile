@@ -7,7 +7,8 @@ SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c 
 				ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 				ft_lstdelone.c ft_printf.c ft_print_decimal_number.c \
 				ft_print_hexadecimal.c ft_print_pointer.c ft_print_unsigned_decimal.c \
-				ft_putstr.c
+				ft_putstr.c \
+				get_next_line.c
 OBJS		=	${SRCS:.c=.o}
 NAME		=	libft.a
 INCS		=	libft.h

@@ -6,12 +6,16 @@
 /*   By: dlom <dlom@student.42prague.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:24:58 by dlom              #+#    #+#             */
-/*   Updated: 2023/09/15 02:16:49 by dlom             ###   ########.fr       */
+/*   Updated: 2023/09/16 17:48:36 by dlom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
 
 # include <unistd.h>
 # include <stddef.h>
@@ -49,7 +53,6 @@ int		ft_atoi(const char *str);
 char	*ft_strdup(char *src);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -72,5 +75,9 @@ int		ft_print_decimal_number(int number);
 int		ft_print_decimal_number(int number);
 int		ft_print_unsigned_decimal(unsigned int num);
 int		ft_print_hexadecimal(unsigned int number, char format);
+char	*get_next_line(int fd);
+int		ft_strlen(const char	*str);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char *s1, char *s2);
 
 #endif
